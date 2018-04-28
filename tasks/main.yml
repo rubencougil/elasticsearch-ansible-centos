@@ -1,0 +1,19 @@
+---
+# tasks file for rubencougil.elasticsearch
+
+- name: Add Elasticsearch Repositories
+  sudo: yes
+  copy:
+    src: ./files/elasticsearch.repo
+    dest: /etc/yum.repos.d/
+
+- name: Install Elasticsearch
+  sudo: yes
+  yum:
+    name: elasticsearch
+
+- name: Add Elasticsearch Config
+  sudo: yes
+  copy:
+    src: ./files/elasticsearch.yml
+    dest: /etc/elasticsearch/

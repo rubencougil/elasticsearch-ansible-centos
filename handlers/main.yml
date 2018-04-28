@@ -1,0 +1,7 @@
+---
+# handlers file for rubencougil.elasticsearch
+
+- name: Start service Elasticsearch, if not running
+  service:
+    name: elasticsearch
+    state: restarted
