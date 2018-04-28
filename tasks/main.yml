@@ -17,3 +17,8 @@
   copy:
     src: ./files/elasticsearch.yml
     dest: /etc/elasticsearch/
+
+- name: Start service
+  service:
+    name: elasticsearch
+    state: started
